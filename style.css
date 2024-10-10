@@ -1,0 +1,358 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box; /* Applies to all elements, including .intro */
+}
+.nav{
+    background-color: hsl(0, 0%, 0%);
+    width: 100%;
+    position: fixed;
+    top: 0; /* Ensures it stays at the top */
+    z-index: 1000; /* Ensures the navbar stays on top */
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+}
+li.options{
+    display: flex;
+    
+    margin: 10px;
+    
+}
+a.link-nav{
+    color: #ffc107;
+    text-decoration: none;
+    padding: 8px;
+
+}
+a.link-nav:hover{
+    background-color: #ffc107;
+    color: #1d1b17;
+    border-radius: 10px;
+    transform: scale(1.05);
+    padding: 16px;    transition: background-color 0.6s cubic-bezier(0.65, 0, 0.35, 1), 
+    transform 0.6s cubic-bezier(0.65, 0, 0.35, 1), 
+    border-radius 0.6s cubic-bezier(0.65, 0, 0.35, 1); 
+    
+
+}
+
+.intro {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1533134486753-c833f0ed4866?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2FsbHBhcGVyfGVufDB8fDB8fHww");
+    background-repeat: no-repeat; /* This prevents the background image from repeating */
+    background-size: cover; /* This ensures the image covers the entire element */
+    width: 100%; /* Ensures it fills the entire width */
+    height: 80vh; /* Keeps the height as you set */
+    margin: 0; /* Ensures no extra margin space */
+    padding: 0; /* If you don't need padding, this helps */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro h2, .intro p {
+    font-size: 37px;
+    font-family: "Jost", sans-serif;
+    color: rgba(255, 255, 255, 0.664); /* Changed for better readability */
+}
+
+.intro span {
+    font-size: 100px;
+    color: #FFD700;
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+}
+
+.intro p {
+    font-weight: bolder;
+}
+h1.display-5{
+    font-family: "Jost", sans-serif;
+    
+}
+p.lead{
+    font-family: "Quicksand", sans-serif;
+}
+img.d-block{
+    border-radius: 100%;
+}
+
+.skills{
+    display: flex;
+    flex-direction: column;
+   
+    height: 100vh;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFD700;
+}
+.skill-1, .skill-2 {
+
+    display: flex;
+    gap: 20px;
+    padding: 35px;
+    font-size: 20px;
+    font-family: "Quicksand", sans-serif;
+    background-color: antiquewhite;
+    border-radius: 5px; /* Initial border radius */
+    transition: background-color 0.6s cubic-bezier(0.65, 0, 0.35, 1), 
+                transform 0.6s cubic-bezier(0.65, 0, 0.35, 1), 
+                border-radius 0.6s cubic-bezier(0.65, 0, 0.35, 1); 
+    /* Custom easing curve for smooth transitions */
+    position: relative;
+    z-index: 1; /* Ensures it stays below the navbar */
+}
+
+.skill-1:hover, .skill-2:hover {
+    background-color: #ffe5b4;
+    transform: scale(1.05);
+    border-radius: 20px;
+}
+
+h2.skills-title{
+    font-size: 60px;
+    font-family: "Jost", sans-serif;
+    
+}
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 40px; /* Added 'px' unit for font size */
+}
+
+.contact-me h2 {
+    font-size: 50px; /* Custom size for the heading */
+    font-family: "Jost", sans-serif; /* Add your preferred font */
+    color: #333; /* Adjust color for better contrast */
+}
+
+.contact-me p {
+    font-size: 18px; /* Adjust font size for the paragraph */
+    color: #666; /* Subtle color for paragraph */
+    font-family: "Quicksand", sans-serif;
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+.contact-button button {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.contact-button button:hover {
+    background-color: #ffc107; /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+.footer-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased gap for better spacing */
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+
+.footer-links ul {
+    display: flex; /* Flexbox applied to align links horizontally */
+    gap: 40px; /* Space between the list items */
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    list-style: none;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-family: "Jost", sans-serif;
+    font-size: 18px; /* Adjust font size for readability */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.footer-links a:hover {
+    color: #ffc107; /* Hover effect color */
+}
+
+
+.copyright {
+    color: #ffc107;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px; /* Adjusted for better visibility */
+    text-align: center;
+}
+.skill-image{
+    border-radius: 5px;
+    width: 200px;
+}
+
+
+
+/* ----------------------------------- */
+/* Media Queries */
+/* ----------------------------------- */
+
+/* Mobile View (up to 768px wide) */
+@media (max-width: 768px) {
+
+    /* Intro section adjustments */
+    .intro h2 {
+        font-size: 24px;
+    }
+
+    .intro span {
+        font-size: 60px;
+    }
+
+    .intro p {
+        font-size: 18px;
+    }
+
+    /* Skills section in a single column */
+    .skills {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .skill-1, .skill-2 {
+        font-size: 16px;
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Footer adjustments */
+    .footer-page {
+        gap: 10px;
+    }
+
+    .footer-links ul {
+        gap: 20px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+    .skill-image{
+        margin: auto;
+    }
+}
+
+/* Tablet View (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* Intro section adjustments */
+    .intro h2 {
+        font-size: 32px;
+    }
+
+    .intro span {
+        font-size: 80px;
+    }
+
+    .intro p {
+        font-size: 24px;
+    }
+
+    /* Skills section stacked in a column */
+    .skills {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .skill-1, .skill-2 {
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    /* Footer adjustments */
+    .footer-page {
+        gap: 15px;
+    }
+
+    .footer-links ul {
+        gap: 30px;
+    }
+
+    .footer-links a {
+        font-size: 16px;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+}
+
+/* Desktop View (1024px and above) */
+@media (min-width: 1024px) {
+
+    /* Intro section */
+    .intro h2 {
+        font-size: 37px;
+    }
+
+    .intro span {
+        font-size: 100px;
+    }
+
+    .intro p {
+        font-size: 28px;
+    }
+
+    /* Skills section in a row */
+    .skills {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 50px;
+        padding: 40px;
+    }
+
+    .skill-1, .skill-2 {
+        font-size: 19px;
+        padding: 35px;
+        flex-direction: row;
+    }
+
+    /* Footer adjustments */
+    .footer-page {
+        gap: 20px;
+    }
+
+    .footer-links ul {
+        gap: 40px;
+    }
+
+    .footer-links a {
+        font-size: 18px;
+    }
+
+    .copyright {
+        font-size: 16px;
+    }
+}
