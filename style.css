@@ -1,6 +1,11 @@
+
 html {
     scroll-behavior: smooth;
 }
+body{
+    margin: 0;
+}
+
 * {
     box-sizing: border-box; /* Applies to all elements, including .intro */
 }
@@ -21,8 +26,7 @@ html {
     height: 10vh;
 }
 li.options{
-    display: flex;
-    
+    display: flex;    
     margin: 10px;
     
 }
@@ -30,6 +34,7 @@ a.link-nav{
     color: #ffc107;
     text-decoration: none;
     padding: 8px;
+    font-family: "Quicksand", sans-serif;
 
 }
 a.link-nav:hover{
@@ -43,13 +48,28 @@ a.link-nav:hover{
     
 
 }
+/* Styling for Hamburger Menu Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #ffc107;
+    margin: 5px;
+    transition: 0.3s;
+}
 
 .intro {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1533134486753-c833f0ed4866?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2FsbHBhcGVyfGVufDB8fDB8fHww");
     background-repeat: no-repeat; /* This prevents the background image from repeating */
     background-size: cover; /* This ensures the image covers the entire element */
     width: 100%; /* Ensures it fills the entire width */
-    height: 80vh; /* Keeps the height as you set */
+    height: 100vh; /* Keeps the height as you set */
     margin: 0; /* Ensures no extra margin space */
     padding: 0; /* If you don't need padding, this helps */
     display: flex;
@@ -94,6 +114,7 @@ img.d-block{
     justify-content: center;
     align-items: center;
     background-color: #FFD700;
+
 }
 .skill-1, .skill-2 {
 
@@ -116,6 +137,7 @@ img.d-block{
     background-color: #ffe5b4;
     transform: scale(1.05);
     border-radius: 20px;
+    
 }
 
 h2.skills-title{
@@ -261,7 +283,28 @@ h2.skills-title{
     .skill-image{
         margin: auto;
     }
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: hsl(0, 0%, 0%);
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        height: 90vh;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-list.show {
+        display: flex;
+    }
 }
+
 
 /* Tablet View (768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
